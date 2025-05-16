@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="calculator-container">
+        <div class="calculator">
+            <div class="mode-switch">
+                <button id="modeToggle">Switch to Scientific</button>
+            </div>
+            <div class="tag-selection">
+                <select id="tagSelect">
+                    <option value="">Select Tag</option>
+                    <option value="entertainment">Entertainment</option>
+                    <option value="food">Food</option>
+                    <option value="shopping">Shopping</option>
+                    <option value="bike">Bike</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div class="display">
+                <input type="text" id="display" readonly>
+            </div>
+            <div class="standard-keys">
+                <button class="clear">C</button>
+                <button class="operator">±</button>
+                <button class="operator">%</button>
+                <button class="operator">÷</button>
+                <button class="number">7</button>
+                <button class="number">8</button>
+                <button class="number">9</button>
+                <button class="operator">×</button>
+                <button class="number">4</button>
+                <button class="number">5</button>
+                <button class="number">6</button>
+                <button class="operator">-</button>
+                <button class="number">1</button>
+                <button class="number">2</button>
+                <button class="number">3</button>
+                <button class="operator">+</button>
+                <button class="number zero">0</button>
+                <button class="decimal">.</button>
+                <button class="equals">=</button>
+            </div>
+            <div class="scientific-keys" style="display: none;">
+                <button class="sci-operator">sin</button>
+                <button class="sci-operator">cos</button>
+                <button class="sci-operator">tan</button>
+                <button class="sci-operator">log</button>
+                <button class="sci-operator">ln</button>
+                <button class="sci-operator">√</button>
+                <button class="sci-operator">x²</button>
+                <button class="sci-operator">xʸ</button>
+                <button class="sci-operator">π</button>
+                <button class="sci-operator">e</button>
+                <button class="sci-operator">(</button>
+                <button class="sci-operator">)</button>
+            </div>
+        </div>
+        <div class="history">
+            <div class="history-header">
+                <h3>Calculation History</h3>
+                <div class="search-filters">
+                    <input type="text" id="searchInput" placeholder="Search by tag...">
+                    <div class="date-filters">
+                        <input type="date" id="startDate">
+                        <input type="date" id="endDate">
+                        <button id="searchBtn">Search</button>
+                    </div>
+                </div>
+            </div>
+            <div id="historyList"></div>
+        </div>
+    </div>
+    <script src="db_config.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 
